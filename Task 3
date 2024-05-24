@@ -1,0 +1,22 @@
+def run_quiz(questions):
+    score = 0
+    for question in questions:
+        print(question['question'])
+        user_answer = input("Enter your answer: ").lower()
+        if user_answer == question['answer'].lower():
+            print("Correct!")
+            score += 1
+        else:
+            print("Incorrect. The correct answer is:", question['answer'])
+    
+    print("Quiz complete! Your final score is:", score, "out of", len(questions))
+
+# Questions for the quiz
+questions = [
+    {"question": "What is the capital of France?", "answer": "Paris"},
+    {"question": "Which planet is known as the Red Planet?", "answer": "Mars"},
+    {"question": "What is the powerhouse of the cell?", "answer": "Mitochondria"}
+]
+
+run_quiz(questions)
+```
